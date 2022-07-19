@@ -1,0 +1,28 @@
+<h1 class="text-center">Create Doctor</h1>
+<form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" id="name"
+        [(ngModel)]="doctor.name" name="name">
+    </div>
+    <div class="form-group">
+        <label>age</label>
+        <input type="text" class="form-control" id="age"
+        [(ngModel)]="doctor.age" name="age">
+    </div>
+    <div class="form-group">
+        <label>gender</label>
+        <select id="gender"[(ngModel)]="doctor.gender" class="form-control" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="others">Others</option>
+          </select>
+    </div>
+    <div class="form-group">
+        <label>specialist</label>
+        <input type="text" class="form-control" id="specialist"
+        [(ngModel)]="doctor.specialist" name="specialist">
+    </div>
+    <button class="btn btn-success" type="submit">Submit</button>
+
+</form>

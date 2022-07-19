@@ -1,0 +1,41 @@
+<div class="container">
+  <h1 style="color:red " class="text-center">DOCTOR INFO AVAILABLE HERE</h1>
+  <form class="form-inline mt-4">
+    <div class="mb-2">
+      <label for="doctor">Choose Doctor</label>
+      <select class="form-control" [(ngModel)]="doctor.name" name="name">
+        <option [value]="docs.name" *ngFor="let docs of doctors">{{docs.name}}</option>
+      </select>
+    </div>
+    <div class="d-flex justify-content-center align-items-center">
+      <button class="btn btn-success my-4 " type="submit" (click)="showDoctorDetails()"><i
+          class="fa fa-search"> </i> Get Info</button>
+    </div>
+  </form>
+</div>
+<!--  -->
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>age</th>
+            <th>Gender</th>
+            <th>Specialist</th>
+            <th>Patients attended</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{doctor1.id}}</td>
+            <td>{{doctor1.name}}</td>
+            <td>{{doctor1.age}}</td>
+            <td>
+                {{doctor1.gender}}
+            </td>
+            <td>{{doctor1.specialist}}</td>
+            <td>{{doctor1.count}}</td>
+        </tr>
+    </tbody>
+</table>

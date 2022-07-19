@@ -1,0 +1,35 @@
+<h2 style="color:deeppink" class="text-center">WANT TO KNOW ABOUT PATIENT...SEARCH HERE</h2>
+
+<div class="container">
+    <form class="form-inline my-4 ">
+        <input class="form-control mr-sm-2" type="search" placeholder="Enter Id" [(ngModel)]="id" name="id" aria-label="Search">
+        <div class="d-flex justify-content-center align-items-center">
+            <button class="btn btn-warning my-4 " type="submit" (click)="showPatientInfo()"><i class="fa fa-search"></i> Search</button>
+        </div>
+      </form>
+      <!-- Jumbotron -->
+<div class="p-5 text-center">
+<div class="mask">
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>dateofvisit</th>
+            <th>doctorVisited</th>
+            <th>prescription</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+            <tr> 
+                <td>{{patient.id}}</td>
+                <td>{{patient.name}}</td>
+                <td>{{patient.dateofvisit}}</td>
+                <td>{{patient.doctorVisited}}</td>
+                <td>{{patient.prescription}}</td>
+            </tr>
+            
+        
+    </tbody>
+</table>
